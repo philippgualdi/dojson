@@ -2,6 +2,7 @@
 #
 # This file is part of DoJSON
 # Copyright (C) 2015, 2016 CERN.
+# Copyright (C) 2020 Graz University of Technology.
 #
 # DoJSON is free software; you can redistribute it and/or modify
 # it under the terms of the Revised BSD License; see LICENSE file for
@@ -44,13 +45,3 @@ after_success:
 
 notifications:
   email: false
-
-deploy:
-  provider: pypi
-  user: jirikuncar
-  password:
-    secure: dN/TFRQCFJmAjYNj07Lsh9UiB5r8rjuR1gKh2ftisnPIotHlYJ8qovARV+p/wMM/nzJAlgA49ZksIG9ru+UYgUYxv9HP1a76OqouKjzKq4QR6euMcHxTXbUaVdGXN/9E8m9sQyAvh8bg3jtXEfUDxdl8c13bhHPR299ltO3HkeKF37HWelz1gd22VuRfGQbaoxefLvPQFI2aMwU+FRP0Wn/1TqM6P0Xbe+d2MbFLIVJgpPKX7m5QZPnnGEfKb4JPpJYDlFguAtYx0DIAziQilZWJt0CXsUSTtoNqRw1/NRMd2yf+T1SLq3FFZoJpQc4YZJjx5IBCMdIt9IoXFcnIsLfsAH3I5OrRTF4gD+/TT92EJ+ifIsh0rMnvx5Nkmb3cNUJFBriOilXh4o/nl3G5bRjWq6o1h6ImSMqA/qrefggUOR6lGxTGiqIxiSkEqQvHQVuCFQJrulgOc+xJp3LnWvbaAO36VXmdk/do34qvhweDzmvtKpbbat8DWwyHEatp0jbelqYuAyP0S0ZJJhHauFSAF1+wj8h4xW6LU+/yxxWS2pR2tuwsq9AMnzxRoPPRqoMPyWnuJrtl1qGAmi9jVG3HgstyvFzTaMe8VGeF4CjFWXymOSvbMGERh81VOU8kIrxDhAVf6KGnN/boY3MtWz6n0K7wSWQ6kxago6KeeI8=
-  distributions: "sdist bdist_wheel"
-  on:
-    tags: true
-  skip_existing: true
