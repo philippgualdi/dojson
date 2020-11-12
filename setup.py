@@ -2,6 +2,7 @@
 #
 # This file is part of DoJSON
 # Copyright (C) 2015, 2016, 2017 CERN.
+# Copyright (C) 2020 Graz University of Technology.
 #
 # DoJSON is free software; you can redistribute it and/or
 # modify it under the terms of the Revised BSD License; see LICENSE
@@ -57,10 +58,10 @@ install_requires = [
 setup(
     name='dojson',
     version=version,
-    url='http://github.com/inveniosoftware/dojson/',
+    url='http://github.com/tu-graz-library/dojson',
     license='BSD',
-    author='Invenio collaboration',
-    author_email='info@inveniosoftware.org',
+    author='Graz University of Technology',
+    author_email='info@tugraz.at',
     description=__doc__,
     long_description=open('README.rst').read(),
     packages=['dojson'],
