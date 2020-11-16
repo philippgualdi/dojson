@@ -2,12 +2,12 @@
 #
 # This file is part of DoJSON
 # Copyright (C) 2016 CERN.
+# Copyright (C) 2020 Graz University of Technology.
 #
 # DoJSON is free software; you can redistribute it and/or
 # modify it under the terms of the Revised BSD License; see LICENSE
 # file for more details.
-
-"""Utility function to manage CLI entry points"""
+"""Utility function to manage CLI entry points."""
 
 import traceback
 

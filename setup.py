@@ -32,7 +32,7 @@ tests_require = [
     'pytest-cache>=1.0',
     'pytest-cov>=2.1.0',
     'pytest-pep8>=1.0.6',
-    'pytest>=2.8.0',
+    'pytest-invenio>=1.4.0',
 ]
 
 extras_require = {
@@ -171,7 +171,7 @@ setup(
         ],
         'dojson.cli.load': [
             'json = dojson.utils:load',
-            'marcxml = dojson.contrib.marc21.utils:load',
+            'marcxml = dojson.contrib.marc21.utils:load', 
         ],
         'dojson.cli.dump': [
             'json = dojson.utils:dump',
