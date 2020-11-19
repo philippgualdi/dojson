@@ -86,9 +86,6 @@ def test_xml_to_marc21_to_xml(file_name):
     )
     exp = expect.strip('\n')
     res = result.output.strip('\n')
-    for i in range(0, len(exp)):
-        print("Exp %s == Res %s " % (exp[i], res[i]))
-        assert exp[i] == res[i]
     assert expect.strip('\n') == result.output.strip('\n')
     assert result.exit_code == 0
 
