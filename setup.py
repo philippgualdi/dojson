@@ -23,21 +23,12 @@ with open(os.path.join('dojson', 'version.py'), 'rt') as f:
     ).group('version')
 
 tests_require = [
-    'check-manifest>=0.25',
-    'coverage>=4.0.0',
-    'isort>=4.2.2',
-    'jsonschema>=2.5.1',
-    'mock>=1.3.0',
-    'pydocstyle>=1.0.0',
-    'pytest-cache>=1.0',
-    'pytest-cov>=2.1.0',
-    'pytest-pep8>=1.0.6',
     'pytest-invenio>=1.4.0',
 ]
 
 extras_require = {
     'docs': [
-        'Sphinx>=1.5.2',
+        'Sphinx>=2.0.0',
     ],
     'jsonschema': [
         'jsonschema>=2.5.1',
