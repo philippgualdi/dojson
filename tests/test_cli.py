@@ -84,8 +84,6 @@ def test_xml_to_marc21_to_xml(file_name):
             'do', 'to_marc21',
         ]
     )
-    exp = expect.strip('\n')
-    res = result.output.strip('\n')
     assert expect.strip('\n') == result.output.strip('\n')
     assert result.exit_code == 0
 

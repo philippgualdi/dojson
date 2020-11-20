@@ -16,9 +16,9 @@
 .. image:: https://img.shields.io/pypi/dm/dojson.svg
         :target: https://pypi.python.org/pypi/dojson
 
-.. image:: https://img.shields.io/github/license/tu-graz-library/dojson.svg
-        :target: https://github.com/tu-graz-library/dojson/blob/master/LICENSE
-
+.. image:: https://travis-ci.com/tu-graz-library/dojson.svg
+        :target: https://travis-ci.com/github/tu-graz-library/dojson
+        
 
 About
 =====
