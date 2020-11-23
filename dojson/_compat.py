@@ -2,6 +2,7 @@
 #
 # This file is part of DoJSON
 # Copyright (C) 2016 CERN.
+# Copyright (C) 2020 Graz University of Technology.
 #
 # DoJSON is free software; you can redistribute it and/or
 # modify it under the terms of the Revised BSD License; see LICENSE
@@ -20,12 +21,13 @@ PY3 = sys.version_info[0] == 3
 
 if PY3:
     import io
+
     StringIO = io.StringIO
     BytesIO = io.BytesIO
-    stdin = getattr(sys.stdin, 'buffer', sys.stdin)
+    stdin = getattr(sys.stdin, "buffer", sys.stdin)
 
     binary_type = bytes
-    string_types = str,
+    string_types = (str,)
     text_type = str
 
     def iteritems(d, **kw):
@@ -35,11 +37,12 @@ if PY3:
     from itertools import zip_longest
 else:
     import StringIO
+
     StringIO = BytesIO = StringIO.StringIO
     stdin = sys.stdin
 
     binary_type = str
-    string_types = basestring,
+    string_types = (basestring,)
     text_type = unicode
 
     def iteritems(d, **kw):
