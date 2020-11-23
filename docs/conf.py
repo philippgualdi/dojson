@@ -121,7 +121,7 @@ html_theme = 'alabaster'
 
 html_theme_options = {
     'description': 'DoJSON is a simple Pythonic JSON to JSON converter.',
-    'github_user': 'inveniosoftware',
+    'github_user': 'tu-graz-library',
     'github_repo': 'dojson',
     'github_button': False,
     'github_banner': True,
@@ -129,7 +129,7 @@ html_theme_options = {
     'travis_button': True,
     'codecov_button': True,
     'extra_nav_links': {
-        'DoJSON@GitHub': 'http://github.com/inveniosoftware/dojson',
+        'DoJSON@GitHub': 'http://github.com/tu-graz-library/dojson',
         'DoJSON@PyPI': 'http://pypi.python.org/pypi/dojson/',
     }
 }

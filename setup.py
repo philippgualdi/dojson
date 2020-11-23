@@ -2,6 +2,7 @@
 #
 # This file is part of DoJSON
 # Copyright (C) 2015, 2016, 2017 CERN.
+# Copyright (C) 2020 Graz University of Technology.
 #
 # DoJSON is free software; you can redistribute it and/or
 # modify it under the terms of the Revised BSD License; see LICENSE
@@ -22,21 +23,12 @@ with open(os.path.join('dojson', 'version.py'), 'rt') as f:
     ).group('version')
 
 tests_require = [
-    'check-manifest>=0.25',
-    'coverage>=4.0.0',
-    'isort>=4.2.2',
-    'jsonschema>=2.5.1',
-    'mock>=1.3.0',
-    'pydocstyle>=1.0.0',
-    'pytest-cache>=1.0',
-    'pytest-cov>=2.1.0',
-    'pytest-pep8>=1.0.6',
-    'pytest>=2.8.0',
+    'pytest-invenio>=1.4.0',
 ]
 
 extras_require = {
     'docs': [
-        'Sphinx>=1.5.2',
+        'Sphinx>=2.0.0',
     ],
     'jsonschema': [
         'jsonschema>=2.5.1',
@@ -57,10 +49,10 @@ install_requires = [
 setup(
     name='dojson',
     version=version,
-    url='http://github.com/inveniosoftware/dojson/',
+    url='http://github.com/tu-graz-library/dojson',
     license='BSD',
-    author='Invenio collaboration',
-    author_email='info@inveniosoftware.org',
+    author='Graz University of Technology',
+    author_email='info@tugraz.at',
     description=__doc__,
     long_description=open('README.rst').read(),
     packages=['dojson'],
@@ -170,7 +162,7 @@ setup(
         ],
         'dojson.cli.load': [
             'json = dojson.utils:load',
-            'marcxml = dojson.contrib.marc21.utils:load',
+            'marcxml = dojson.contrib.marc21.utils:load', 
         ],
         'dojson.cli.dump': [
             'json = dojson.utils:dump',

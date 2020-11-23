@@ -18,10 +18,10 @@ import pkg_resources
 import pytest
 import simplejson as json
 from click.testing import CliRunner
+from test_core import RECORD_999_FIELD, RECORD_SIMPLE
 
 from dojson import cli
 from dojson.contrib.marc21.utils import create_record
-from test_core import RECORD_999_FIELD, RECORD_SIMPLE
 
 
 @pytest.mark.parametrize('file_name', [
@@ -84,7 +84,6 @@ def test_xml_to_marc21_to_xml(file_name):
             'do', 'to_marc21',
         ]
     )
-
     assert expect.strip('\n') == result.output.strip('\n')
     assert result.exit_code == 0
 

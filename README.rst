@@ -4,21 +4,21 @@
 
 .. currentmodule:: dojson
 
-.. image:: https://img.shields.io/travis/inveniosoftware/dojson.svg
-        :target: https://travis-ci.org/inveniosoftware/dojson
+.. image:: https://img.shields.io/travis/tu-graz-library/dojson.svg
+        :target: https://travis-ci.org/tu-graz-library/dojson
 
-.. image:: https://img.shields.io/coveralls/inveniosoftware/dojson.svg
-        :target: https://coveralls.io/r/inveniosoftware/dojson
+.. image:: https://img.shields.io/coveralls/tu-graz-library/dojson.svg
+        :target: https://coveralls.io/r/tu-graz-library/dojson
 
-.. image:: https://img.shields.io/github/tag/inveniosoftware/dojson.svg
-        :target: https://github.com/inveniosoftware/dojson/releases
+.. image:: https://img.shields.io/github/tag/tu-graz-library/dojson.svg
+        :target: https://github.com/tu-graz-library/dojson/releases
 
 .. image:: https://img.shields.io/pypi/dm/dojson.svg
         :target: https://pypi.python.org/pypi/dojson
 
-.. image:: https://img.shields.io/github/license/inveniosoftware/dojson.svg
-        :target: https://github.com/inveniosoftware/dojson/blob/master/LICENSE
-
+.. image:: https://travis-ci.com/tu-graz-library/dojson.svg
+        :target: https://travis-ci.com/github/tu-graz-library/dojson
+        
 
 About
 =====
