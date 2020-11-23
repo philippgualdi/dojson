@@ -129,8 +129,7 @@
             "type": "array",
             "items": {
                 "type": "object",
-                "properties": {
-                }
+                "properties": {}
             }
         },
         "captions_and_pattern_supplementary_material": {
@@ -138,8 +137,7 @@
             "type": "array",
             "items": {
                 "type": "object",
-                "properties": {
-                }
+                "properties": {}
             }
         },
         "captions_and_pattern_indexes": {
@@ -147,8 +145,7 @@
             "type": "array",
             "items": {
                 "type": "object",
-                "properties": {
-                }
+                "properties": {}
             }
         },
         "electronic_location_and_access": {
@@ -297,8 +294,7 @@
             "type": "array",
             "items": {
                 "type": "object",
-                "properties": {
-                }
+                "properties": {}
             }
         },
         "enumeration_and_chronology_supplementary_material": {
@@ -306,8 +302,7 @@
             "type": "array",
             "items": {
                 "type": "object",
-                "properties": {
-                }
+                "properties": {}
             }
         },
         "enumeration_and_chronology_indexes": {
@@ -315,8 +310,7 @@
             "type": "array",
             "items": {
                 "type": "object",
-                "properties": {
-                }
+                "properties": {}
             }
         },
         "textual_holdings_basic_bibliographic_unit": {
@@ -324,8 +318,7 @@
             "type": "array",
             "items": {
                 "type": "object",
-                "properties": {
-                }
+                "properties": {}
             }
         },
         "textual_holdings_supplementary_material": {
@@ -333,8 +326,7 @@
             "type": "array",
             "items": {
                 "type": "object",
-                "properties": {
-                }
+                "properties": {}
             }
         },
         "textual_holdings_indexes": {
@@ -342,8 +334,7 @@
             "type": "array",
             "items": {
                 "type": "object",
-                "properties": {
-                }
+                "properties": {}
             }
         },
         "item_information_basic_bibliographic_unit": {
@@ -351,8 +342,7 @@
             "type": "array",
             "items": {
                 "type": "object",
-                "properties": {
-                }
+                "properties": {}
             }
         },
         "item_information_supplementary_material": {
@@ -360,8 +350,7 @@
             "type": "array",
             "items": {
                 "type": "object",
-                "properties": {
-                }
+                "properties": {}
             }
         },
         "item_information_indexes": {
@@ -369,8 +358,7 @@
             "type": "array",
             "items": {
                 "type": "object",
-                "properties": {
-                }
+                "properties": {}
             }
         },
         "alternate_graphic_representation": {
@@ -602,7 +590,11 @@
                 "type": "object",
                 "properties": {
                     "method_of_machine_assignment": {
-                        "enum": ["Fully machine-generated", "No information provided/not applicable", "Partially machine-generated"]
+                        "enum": [
+                            "Fully machine-generated",
+                            "No information provided/not applicable",
+                            "Partially machine-generated"
+                        ]
                     },
                     "generation_process": {
                         "type": "string"

@@ -5,7 +5,11 @@
             "description": "Main Entry-Personal Name",
             "properties": {
                 "type_of_personal_name_entry_element": {
-                    "enum": ["Family name", "Surname", "Forename"]
+                    "enum": [
+                        "Family name",
+                        "Surname",
+                        "Forename"
+                    ]
                 },
                 "personal_name": {
                     "type": "string"
@@ -97,7 +101,11 @@
             "description": "Main Entry-Corporate Name",
             "properties": {
                 "type_of_corporate_name_entry_element": {
-                    "enum": ["Inverted name", "Jurisdiction name", "Name in direct order"]
+                    "enum": [
+                        "Inverted name",
+                        "Jurisdiction name",
+                        "Name in direct order"
+                    ]
                 },
                 "corporate_name_or_jurisdiction_name_as_entry_element": {
                     "type": "string"
@@ -186,7 +194,11 @@
             "description": "Main Entry-Meeting Name",
             "properties": {
                 "type_of_meeting_name_entry_element": {
-                    "enum": ["Inverted name", "Jurisdiction name", "Name in direct order"]
+                    "enum": [
+                        "Inverted name",
+                        "Jurisdiction name",
+                        "Name in direct order"
+                    ]
                 },
                 "meeting_name_or_jurisdiction_name_as_entry_element": {
                     "type": "string"
@@ -275,7 +287,18 @@
             "description": "Main Entry-Uniform Title",
             "properties": {
                 "nonfiling_characters": {
-                    "enum": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+                    "enum": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9
+                    ]
                 },
                 "uniform_title": {
                     "type": "string"

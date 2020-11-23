@@ -292,7 +292,11 @@
                 "type": "object",
                 "properties": {
                     "type_of_ring": {
-                        "enum": ["Not applicable", "Exclusion ring", "Outer ring"]
+                        "enum": [
+                            "Not applicable",
+                            "Exclusion ring",
+                            "Outer ring"
+                        ]
                     },
                     "beginning_date": {
                         "type": "string"
@@ -925,10 +929,18 @@
                 "type": "object",
                 "properties": {
                     "type_of_edition": {
-                        "enum": ["Full", "Other edition specified in subfield $2", "Abridged"]
+                        "enum": [
+                            "Full",
+                            "Other edition specified in subfield $2",
+                            "Abridged"
+                        ]
                     },
                     "source_of_call_number": {
-                        "enum": ["Assigned by agency other than LC", "No information provided", "Assigned by LC"]
+                        "enum": [
+                            "Assigned by agency other than LC",
+                            "No information provided",
+                            "Assigned by LC"
+                        ]
                     },
                     "classification_number": {
                         "type": "string"
@@ -967,10 +979,17 @@
                 "type": "object",
                 "properties": {
                     "type_of_edition": {
-                        "enum": ["Full", "Other edition specified in subfield $2", "Abridged"]
+                        "enum": [
+                            "Full",
+                            "Other edition specified in subfield $2",
+                            "Abridged"
+                        ]
                     },
                     "source_of_classification_number": {
-                        "enum": ["Assigned by agency other than LC", "Assigned by LC"]
+                        "enum": [
+                            "Assigned by agency other than LC",
+                            "Assigned by LC"
+                        ]
                     },
                     "classification_number_element_single_number_or_beginning_number_of_span": {
                         "type": "string"

@@ -8,10 +8,16 @@
                 "type": "object",
                 "properties": {
                     "note_controller": {
-                        "enum": ["Do not display note", "Display note"]
+                        "enum": [
+                            "Do not display note",
+                            "Display note"
+                        ]
                     },
                     "display_constant_controller": {
-                        "enum": ["Main series", "No display constant generated"]
+                        "enum": [
+                            "Main series",
+                            "No display constant generated"
+                        ]
                     },
                     "main_entry_heading": {
                         "type": "string"
@@ -101,10 +107,16 @@
                 "type": "object",
                 "properties": {
                     "note_controller": {
-                        "enum": ["Do not display note", "Display note"]
+                        "enum": [
+                            "Do not display note",
+                            "Display note"
+                        ]
                     },
                     "display_constant_controller": {
-                        "enum": ["Has subseries", "No display constant generated"]
+                        "enum": [
+                            "Has subseries",
+                            "No display constant generated"
+                        ]
                     },
                     "main_entry_heading": {
                         "type": "string"
@@ -194,10 +206,16 @@
                 "type": "object",
                 "properties": {
                     "note_controller": {
-                        "enum": ["Do not display note", "Display note"]
+                        "enum": [
+                            "Do not display note",
+                            "Display note"
+                        ]
                     },
                     "display_constant_controller": {
-                        "enum": ["Translation of", "No display constant generated"]
+                        "enum": [
+                            "Translation of",
+                            "No display constant generated"
+                        ]
                     },
                     "relationship_code": {
                         "type": "array",
@@ -308,10 +326,16 @@
                 "type": "object",
                 "properties": {
                     "note_controller": {
-                        "enum": ["Do not display note", "Display note"]
+                        "enum": [
+                            "Do not display note",
+                            "Display note"
+                        ]
                     },
                     "display_constant_controller": {
-                        "enum": ["Translated as", "No display constant generated"]
+                        "enum": [
+                            "Translated as",
+                            "No display constant generated"
+                        ]
                     },
                     "relationship_code": {
                         "type": "array",
@@ -422,10 +446,16 @@
                 "type": "object",
                 "properties": {
                     "note_controller": {
-                        "enum": ["Do not display note", "Display note"]
+                        "enum": [
+                            "Do not display note",
+                            "Display note"
+                        ]
                     },
                     "display_constant_controller": {
-                        "enum": ["Has supplement", "No display constant generated"]
+                        "enum": [
+                            "Has supplement",
+                            "No display constant generated"
+                        ]
                     },
                     "relationship_code": {
                         "type": "array",
@@ -536,10 +566,17 @@
                 "type": "object",
                 "properties": {
                     "note_controller": {
-                        "enum": ["Do not display note", "Display note"]
+                        "enum": [
+                            "Do not display note",
+                            "Display note"
+                        ]
                     },
                     "display_constant_controller": {
-                        "enum": ["Supplement to", "Parent", "No display constant generated"]
+                        "enum": [
+                            "Supplement to",
+                            "Parent",
+                            "No display constant generated"
+                        ]
                     },
                     "relationship_code": {
                         "type": "array",
@@ -650,10 +687,16 @@
                 "type": "object",
                 "properties": {
                     "note_controller": {
-                        "enum": ["Do not display note", "Display note"]
+                        "enum": [
+                            "Do not display note",
+                            "Display note"
+                        ]
                     },
                     "display_constant_controller": {
-                        "enum": ["In", "No display constant generated"]
+                        "enum": [
+                            "In",
+                            "No display constant generated"
+                        ]
                     },
                     "materials_specified": {
                         "type": "string"
@@ -770,10 +813,16 @@
                 "type": "object",
                 "properties": {
                     "note_controller": {
-                        "enum": ["Do not display note", "Display note"]
+                        "enum": [
+                            "Do not display note",
+                            "Display note"
+                        ]
                     },
                     "display_constant_controller": {
-                        "enum": ["Constituent unit", "No display constant generated"]
+                        "enum": [
+                            "Constituent unit",
+                            "No display constant generated"
+                        ]
                     },
                     "relationship_code": {
                         "type": "array",
@@ -884,10 +933,16 @@
                 "type": "object",
                 "properties": {
                     "note_controller": {
-                        "enum": ["Do not display note", "Display note"]
+                        "enum": [
+                            "Do not display note",
+                            "Display note"
+                        ]
                     },
                     "display_constant_controller": {
-                        "enum": ["Other edition available", "No display constant generated"]
+                        "enum": [
+                            "Other edition available",
+                            "No display constant generated"
+                        ]
                     },
                     "relationship_code": {
                         "type": "array",
@@ -1004,10 +1059,16 @@
                 "type": "object",
                 "properties": {
                     "note_controller": {
-                        "enum": ["Do not display note", "Display note"]
+                        "enum": [
+                            "Do not display note",
+                            "Display note"
+                        ]
                     },
                     "display_constant_controller": {
-                        "enum": ["Available in another form", "No display constant generated"]
+                        "enum": [
+                            "Available in another form",
+                            "No display constant generated"
+                        ]
                     },
                     "relationship_code": {
                         "type": "array",
@@ -1118,10 +1179,16 @@
                 "type": "object",
                 "properties": {
                     "note_controller": {
-                        "enum": ["Do not display note", "Display note"]
+                        "enum": [
+                            "Do not display note",
+                            "Display note"
+                        ]
                     },
                     "display_constant_controller": {
-                        "enum": ["Issued with", "No display constant generated"]
+                        "enum": [
+                            "Issued with",
+                            "No display constant generated"
+                        ]
                     },
                     "main_entry_heading": {
                         "type": "string"
@@ -1217,10 +1284,22 @@
                 "type": "object",
                 "properties": {
                     "note_controller": {
-                        "enum": ["Do not display note", "Display note"]
+                        "enum": [
+                            "Do not display note",
+                            "Display note"
+                        ]
                     },
                     "type_of_relationship": {
-                        "enum": ["Continues", "Continues in part", "Absorbed in part", "Supersedes in part", "Absorbed", "Formed by the union of ... and ...", "Separated from", "Supersedes"]
+                        "enum": [
+                            "Continues",
+                            "Continues in part",
+                            "Absorbed in part",
+                            "Supersedes in part",
+                            "Absorbed",
+                            "Formed by the union of ... and ...",
+                            "Separated from",
+                            "Supersedes"
+                        ]
                     },
                     "relationship_code": {
                         "type": "array",
@@ -1331,10 +1410,23 @@
                 "type": "object",
                 "properties": {
                     "note_controller": {
-                        "enum": ["Do not display note", "Display note"]
+                        "enum": [
+                            "Do not display note",
+                            "Display note"
+                        ]
                     },
                     "type_of_relationship": {
-                        "enum": ["Merged with ... to form ...", "Changed back to", "Continued by", "Absorbed in part by", "Superseded in part by", "Split into ... and ...", "Absorbed by", "Superseded by", "Continued in part by"]
+                        "enum": [
+                            "Merged with ... to form ...",
+                            "Changed back to",
+                            "Continued by",
+                            "Absorbed in part by",
+                            "Superseded in part by",
+                            "Split into ... and ...",
+                            "Absorbed by",
+                            "Superseded by",
+                            "Continued in part by"
+                        ]
                     },
                     "relationship_code": {
                         "type": "array",
@@ -1445,10 +1537,16 @@
                 "type": "object",
                 "properties": {
                     "note_controller": {
-                        "enum": ["Do not display note", "Display note"]
+                        "enum": [
+                            "Do not display note",
+                            "Display note"
+                        ]
                     },
                     "display_constant_controller": {
-                        "enum": ["Data source", "No display constant generated"]
+                        "enum": [
+                            "Data source",
+                            "No display constant generated"
+                        ]
                     },
                     "relationship_code": {
                         "type": "array",
@@ -1568,10 +1666,16 @@
                 "type": "object",
                 "properties": {
                     "note_controller": {
-                        "enum": ["Do not display note", "Display note"]
+                        "enum": [
+                            "Do not display note",
+                            "Display note"
+                        ]
                     },
                     "display_constant_controller": {
-                        "enum": ["Related item", "No display constant generated"]
+                        "enum": [
+                            "Related item",
+                            "No display constant generated"
+                        ]
                     },
                     "relationship_code": {
                         "type": "array",

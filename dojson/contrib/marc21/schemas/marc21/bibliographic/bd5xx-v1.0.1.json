@@ -125,10 +125,18 @@
                 "type": "object",
                 "properties": {
                     "display_constant_controller": {
-                        "enum": ["Incomplete contents", "No display constant generated", "Contents", "Partial contents"]
+                        "enum": [
+                            "Incomplete contents",
+                            "No display constant generated",
+                            "Contents",
+                            "Partial contents"
+                        ]
                     },
                     "level_of_content_designation": {
-                        "enum": ["Enhanced", "Basic"]
+                        "enum": [
+                            "Enhanced",
+                            "Basic"
+                        ]
                     },
                     "formatted_contents_note": {
                         "type": "string"
@@ -176,7 +184,11 @@
                 "type": "object",
                 "properties": {
                     "restriction": {
-                        "enum": ["No restrictions", "Restrictions apply", "No information provided"]
+                        "enum": [
+                            "No restrictions",
+                            "Restrictions apply",
+                            "No information provided"
+                        ]
                     },
                     "terms_governing_access": {
                         "type": "string"
@@ -286,7 +298,13 @@
                 "type": "object",
                 "properties": {
                     "coverage_location_in_source": {
-                        "enum": ["Coverage is selective", "Location in source given", "Coverage unknown", "Location in source not given", "Coverage complete"]
+                        "enum": [
+                            "Coverage is selective",
+                            "Location in source given",
+                            "Coverage unknown",
+                            "Location in source not given",
+                            "Coverage complete"
+                        ]
                     },
                     "name_of_source": {
                         "type": "string"
@@ -328,7 +346,10 @@
                 "type": "object",
                 "properties": {
                     "display_constant_controller": {
-                        "enum": ["Cast", "No display constant generated"]
+                        "enum": [
+                            "Cast",
+                            "No display constant generated"
+                        ]
                     },
                     "participant_or_performer_note": {
                         "type": "string"
@@ -477,7 +498,10 @@
                 "type": "object",
                 "properties": {
                     "display_constant_controller": {
-                        "enum": ["Type of file", "No display constant generated"]
+                        "enum": [
+                            "Type of file",
+                            "No display constant generated"
+                        ]
                     },
                     "type_of_computer_file_or_data_note": {
                         "type": "string"
@@ -555,7 +579,15 @@
                 "type": "object",
                 "properties": {
                     "display_constant_controller": {
-                        "enum": ["Review", "Summary", "Scope and content", "Content advice", "Subject", "Abstract", "No display constant generated"]
+                        "enum": [
+                            "Review",
+                            "Summary",
+                            "Scope and content",
+                            "Content advice",
+                            "Subject",
+                            "Abstract",
+                            "No display constant generated"
+                        ]
                     },
                     "summary": {
                         "type": "string"
@@ -597,7 +629,15 @@
                 "type": "object",
                 "properties": {
                     "display_constant_controller": {
-                        "enum": ["Interest age level", "Interest grade level", "Audience", "Motivation/interest level", "Reading grade level", "Special audience characteristics", "No display constant generated"]
+                        "enum": [
+                            "Interest age level",
+                            "Interest grade level",
+                            "Audience",
+                            "Motivation/interest level",
+                            "Reading grade level",
+                            "Special audience characteristics",
+                            "No display constant generated"
+                        ]
                     },
                     "target_audience_note": {
                         "type": "array",
@@ -630,7 +670,10 @@
                 "type": "object",
                 "properties": {
                     "display_constant_controller": {
-                        "enum": ["Geographic coverage", "No display constant generated"]
+                        "enum": [
+                            "Geographic coverage",
+                            "No display constant generated"
+                        ]
                     },
                     "geographic_coverage_note": {
                         "type": "string"
@@ -654,7 +697,10 @@
                 "type": "object",
                 "properties": {
                     "display_constant_controller": {
-                        "enum": ["Cite as", "No display constant generated"]
+                        "enum": [
+                            "Cite as",
+                            "No display constant generated"
+                        ]
                     },
                     "preferred_citation_of_described_materials_note": {
                         "type": "string"
@@ -705,7 +751,10 @@
                 "type": "object",
                 "properties": {
                     "display_constant_controller": {
-                        "enum": ["No display constant generated", "Reading program"]
+                        "enum": [
+                            "No display constant generated",
+                            "Reading program"
+                        ]
                     },
                     "program_name": {
                         "type": "string"
@@ -942,7 +991,10 @@
                 "type": "object",
                 "properties": {
                     "custodial_role": {
-                        "enum": ["Holder of duplicates", "Holder of originals"]
+                        "enum": [
+                            "Holder of duplicates",
+                            "Holder of originals"
+                        ]
                     },
                     "custodian": {
                         "type": "string"
@@ -1134,7 +1186,11 @@
                 "type": "object",
                 "properties": {
                     "privacy": {
-                        "enum": ["Not private", "No information provided", "Private"]
+                        "enum": [
+                            "Not private",
+                            "No information provided",
+                            "Private"
+                        ]
                     },
                     "source_of_acquisition": {
                         "type": "string"
@@ -1194,7 +1250,11 @@
                 "type": "object",
                 "properties": {
                     "privacy": {
-                        "enum": ["Not private", "No information provided", "Private"]
+                        "enum": [
+                            "Not private",
+                            "No information provided",
+                            "Private"
+                        ]
                     },
                     "materials_specified": {
                         "type": "string"
@@ -1302,7 +1362,11 @@
                 "type": "object",
                 "properties": {
                     "relationship": {
-                        "enum": ["No information provided", "Associated materials", "Related materials"]
+                        "enum": [
+                            "No information provided",
+                            "Associated materials",
+                            "Related materials"
+                        ]
                     },
                     "custodian": {
                         "type": "array",
@@ -1362,7 +1426,11 @@
                 "type": "object",
                 "properties": {
                     "type_of_data": {
-                        "enum": ["Administrative history", "Biographical sketch", "No information provided"]
+                        "enum": [
+                            "Administrative history",
+                            "Biographical sketch",
+                            "No information provided"
+                        ]
                     },
                     "biographical_or_historical_data": {
                         "type": "string"
@@ -1557,7 +1625,11 @@
                 "type": "object",
                 "properties": {
                     "display_constant_controller": {
-                        "enum": ["Finding aids", "No display constant generated", "Indexes"]
+                        "enum": [
+                            "Finding aids",
+                            "No display constant generated",
+                            "Indexes"
+                        ]
                     },
                     "cumulative_index_finding_aids_note": {
                         "type": "string"
@@ -1602,7 +1674,10 @@
                 "type": "object",
                 "properties": {
                     "display_constant_controller": {
-                        "enum": ["Documentation", "No display constant generated"]
+                        "enum": [
+                            "Documentation",
+                            "No display constant generated"
+                        ]
                     },
                     "information_about_documentation_note": {
                         "type": "string"
@@ -1632,7 +1707,11 @@
                 "type": "object",
                 "properties": {
                     "privacy": {
-                        "enum": ["Not private", "No information provided", "Private"]
+                        "enum": [
+                            "Not private",
+                            "No information provided",
+                            "Private"
+                        ]
                     },
                     "history": {
                         "type": "string"
@@ -1755,7 +1834,11 @@
                 "type": "object",
                 "properties": {
                     "display_constant_controller": {
-                        "enum": ["File size", "Case file characteristics", "No display constant generated"]
+                        "enum": [
+                            "File size",
+                            "Case file characteristics",
+                            "No display constant generated"
+                        ]
                     },
                     "number_of_cases_variables": {
                         "type": "string"
@@ -1806,7 +1889,10 @@
                 "type": "object",
                 "properties": {
                     "display_constant_controller": {
-                        "enum": ["Methodology", "No display constant generated"]
+                        "enum": [
+                            "Methodology",
+                            "No display constant generated"
+                        ]
                     },
                     "methodology_note": {
                         "type": "string"
@@ -1851,7 +1937,10 @@
                 "type": "object",
                 "properties": {
                     "display_constant_controller": {
-                        "enum": ["Publications", "No display constant generated"]
+                        "enum": [
+                            "Publications",
+                            "No display constant generated"
+                        ]
                     },
                     "publications_about_described_materials_note": {
                         "type": "string"
@@ -1884,7 +1973,11 @@
                 "type": "object",
                 "properties": {
                     "privacy": {
-                        "enum": ["Not private", "No information provided", "Private"]
+                        "enum": [
+                            "Not private",
+                            "No information provided",
+                            "Private"
+                        ]
                     },
                     "action": {
                         "type": "string"
@@ -2070,7 +2163,10 @@
                 "type": "object",
                 "properties": {
                     "display_constant_controller": {
-                        "enum": ["Awards", "No display constant generated"]
+                        "enum": [
+                            "Awards",
+                            "No display constant generated"
+                        ]
                     },
                     "awards_note": {
                         "type": "string"
@@ -2097,7 +2193,11 @@
                 "type": "object",
                 "properties": {
                     "display_constant_controller": {
-                        "enum": ["No information provided", "Source of description", "Latest issue consulted"]
+                        "enum": [
+                            "No information provided",
+                            "Source of description",
+                            "Latest issue consulted"
+                        ]
                     },
                     "source_of_description_note": {
                         "type": "string"

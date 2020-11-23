@@ -254,7 +254,11 @@
                 "type": "object",
                 "properties": {
                     "privacy": {
-                        "enum": ["Not private", "No information provided", "Private"]
+                        "enum": [
+                            "Not private",
+                            "No information provided",
+                            "Private"
+                        ]
                     },
                     "history": {
                         "type": "string"

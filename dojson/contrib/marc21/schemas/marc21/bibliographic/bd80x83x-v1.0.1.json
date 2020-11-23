@@ -8,7 +8,11 @@
                 "type": "object",
                 "properties": {
                     "type_of_personal_name_entry_element": {
-                        "enum": ["Family name", "Surname", "Forename"]
+                        "enum": [
+                            "Family name",
+                            "Surname",
+                            "Forename"
+                        ]
                     },
                     "authority_record_control_number_or_standard_number": {
                         "type": "array",
@@ -149,7 +153,11 @@
                 "type": "object",
                 "properties": {
                     "type_of_corporate_name_entry_element": {
-                        "enum": ["Inverted name", "Jurisdiction name", "Name in direct order"]
+                        "enum": [
+                            "Inverted name",
+                            "Jurisdiction name",
+                            "Name in direct order"
+                        ]
                     },
                     "authority_record_control_number_or_standard_number": {
                         "type": "array",
@@ -287,7 +295,11 @@
                 "type": "object",
                 "properties": {
                     "type_of_meeting_name_entry_element": {
-                        "enum": ["Inverted name", "Jurisdiction name", "Name in direct order"]
+                        "enum": [
+                            "Inverted name",
+                            "Jurisdiction name",
+                            "Name in direct order"
+                        ]
                     },
                     "authority_record_control_number_or_standard_number": {
                         "type": "array",
@@ -413,7 +425,18 @@
                 "type": "object",
                 "properties": {
                     "nonfiling_characters": {
-                        "enum": ["1", "0", "3", "2", "5", "4", "7", "6", "9", "8"]
+                        "enum": [
+                            "1",
+                            "0",
+                            "3",
+                            "2",
+                            "5",
+                            "4",
+                            "7",
+                            "6",
+                            "9",
+                            "8"
+                        ]
                     },
                     "authority_record_control_number_or_standard_number": {
                         "type": "array",

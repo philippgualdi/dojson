@@ -2,6 +2,7 @@
 #
 # This file is part of DoJSON
 # Copyright (C) 2015, 2016 CERN.
+# Copyright (C) 2020 Graz University of Technology.
 #
 # DoJSON is free software; you can redistribute it and/or
 # modify it under the terms of the Revised BSD License; see LICENSE
@@ -57,10 +58,10 @@ class Underdo(Overdo):
         if self.index is None:
             self.build()
 
-        if '__order__' in blob and not isinstance(blob, GroupableOrderedDict):
+        if "__order__" in blob and not isinstance(blob, GroupableOrderedDict):
             blob = GroupableOrderedDict(blob)
 
-        if '__order__' in blob:
+        if "__order__" in blob:
             items = blob.iteritems(repeated=True)
         else:
             items = iteritems(blob)
@@ -74,18 +75,18 @@ class Underdo(Overdo):
                 name, creator = result
                 item = creator(output, key, value)
                 if isinstance(item, MutableMapping):
-                    field = '{0}{1}{2}'.format(
-                        name, item.pop('$ind1', '_'),
-                        item.pop('$ind2', '_'))
-                    if '__order__' in item:
+                    field = "{0}{1}{2}".format(
+                        name, item.pop("$ind1", "_"), item.pop("$ind2", "_")
+                    )
+                    if "__order__" in item:
                         item = GroupableOrderedDict(item)
                     output.append((field, item))
                 elif isinstance(item, MutableSequence):
                     for v in item:
                         try:
-                            field = '{0}{1}{2}'.format(
-                                name, v.pop('$ind1', '_'),
-                                v.pop('$ind2', '_'))
+                            field = "{0}{1}{2}".format(
+                                name, v.pop("$ind1", "_"), v.pop("$ind2", "_")
+                            )
                         except AttributeError:
                             field = name
                         output.append((field, v))
@@ -102,8 +103,7 @@ class Underdo(Overdo):
         return GroupableOrderedDict(output)
 
 
-to_marc21 = Underdo(entry_point_group='dojson.contrib.to_marc21')
+to_marc21 = Underdo(entry_point_group="dojson.contrib.to_marc21")
 
-to_marc21_authority = Underdo(
-    entry_point_group='dojson.contrib.to_marc21_authority')
+to_marc21_authority = Underdo(entry_point_group="dojson.contrib.to_marc21_authority")
 """MARC 21 Format for Authority Data."""

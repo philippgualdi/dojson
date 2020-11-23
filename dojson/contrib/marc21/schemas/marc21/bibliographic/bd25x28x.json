@@ -159,7 +159,11 @@
                 "type": "object",
                 "properties": {
                     "sequence_of_publishing_statements": {
-                        "enum": ["Intervening publisher", "Current/latest publisher", "Not applicable/No information provided/Earliest available publisher"]
+                        "enum": [
+                            "Intervening publisher",
+                            "Current/latest publisher",
+                            "Not applicable/No information provided/Earliest available publisher"
+                        ]
                     },
                     "place_of_publication_distribution": {
                         "type": "array",
@@ -309,10 +313,20 @@
                 "type": "object",
                 "properties": {
                     "sequence_of_statements": {
-                        "enum": ["Intervening", "Current/latest", "Not applicable/No information provided/Earliest"]
+                        "enum": [
+                            "Intervening",
+                            "Current/latest",
+                            "Not applicable/No information provided/Earliest"
+                        ]
                     },
                     "function_of_entity": {
-                        "enum": ["Manufacture", "Distribution", "Production", "Publication", "Copyright notice date"]
+                        "enum": [
+                            "Manufacture",
+                            "Distribution",
+                            "Production",
+                            "Publication",
+                            "Copyright notice date"
+                        ]
                     },
                     "place_of_production_publication_distribution_manufacture": {
                         "type": "array",
@@ -354,7 +368,11 @@
                 "type": "object",
                 "properties": {
                     "level": {
-                        "enum": ["No level specified", "Primary", "Secondary"]
+                        "enum": [
+                            "No level specified",
+                            "Primary",
+                            "Secondary"
+                        ]
                     },
                     "address": {
                         "type": "array",

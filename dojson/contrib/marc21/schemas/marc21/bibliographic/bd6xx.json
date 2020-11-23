@@ -8,7 +8,11 @@
                 "type": "object",
                 "properties": {
                     "type_of_personal_name_entry_element": {
-                        "enum": ["Family name", "Surname", "Forename"]
+                        "enum": [
+                            "Family name",
+                            "Surname",
+                            "Forename"
+                        ]
                     },
                     "thesaurus": {
                         "type": "string"
@@ -155,7 +159,11 @@
                 "type": "object",
                 "properties": {
                     "type_of_corporate_name_entry_element": {
-                        "enum": ["Inverted name", "Jurisdiction name", "Name in direct order"]
+                        "enum": [
+                            "Inverted name",
+                            "Jurisdiction name",
+                            "Name in direct order"
+                        ]
                     },
                     "thesaurus": {
                         "type": "string"
@@ -296,7 +304,11 @@
                 "type": "object",
                 "properties": {
                     "type_of_meeting_name_entry_element": {
-                        "enum": ["Inverted name", "Jurisdiction name", "Name in direct order"]
+                        "enum": [
+                            "Inverted name",
+                            "Jurisdiction name",
+                            "Name in direct order"
+                        ]
                     },
                     "thesaurus": {
                         "type": "string"
@@ -425,7 +437,18 @@
                 "type": "object",
                 "properties": {
                     "nonfiling_characters": {
-                        "enum": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+                        "enum": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            8,
+                            9
+                        ]
                     },
                     "thesaurus": {
                         "type": "string"
@@ -554,7 +577,11 @@
                 "type": "object",
                 "properties": {
                     "type_of_date_or_time_period": {
-                        "enum": ["Date or time period of creation or origin", "No information provided", "Date or time period covered or depicted"]
+                        "enum": [
+                            "Date or time period of creation or origin",
+                            "No information provided",
+                            "Date or time period covered or depicted"
+                        ]
                     },
                     "thesaurus": {
                         "type": "string"
@@ -617,7 +644,12 @@
                 "type": "object",
                 "properties": {
                     "level_of_subject": {
-                        "enum": ["No level specified", "Primary", "No information provided", "Secondary"]
+                        "enum": [
+                            "No level specified",
+                            "Primary",
+                            "No information provided",
+                            "Secondary"
+                        ]
                     },
                     "thesaurus": {
                         "type": "string"
@@ -773,10 +805,24 @@
                 "type": "object",
                 "properties": {
                     "level_of_index_term": {
-                        "enum": ["No level specified", "Primary", "No information provided", "Secondary"]
+                        "enum": [
+                            "No level specified",
+                            "Primary",
+                            "No information provided",
+                            "Secondary"
+                        ]
                     },
                     "type_of_term_or_name": {
-                        "enum": ["Topical term", "No information provided", "Meeting name", "Geographic name", "Personal name", "Genre/form term", "Chronological term", "Corporate name"]
+                        "enum": [
+                            "Topical term",
+                            "No information provided",
+                            "Meeting name",
+                            "Geographic name",
+                            "Personal name",
+                            "Genre/form term",
+                            "Chronological term",
+                            "Corporate name"
+                        ]
                     },
                     "uncontrolled_term": {
                         "type": "array",
@@ -803,7 +849,12 @@
                 "type": "object",
                 "properties": {
                     "level_of_subject": {
-                        "enum": ["No level specified", "Primary", "No information provided", "Secondary"]
+                        "enum": [
+                            "No level specified",
+                            "Primary",
+                            "No information provided",
+                            "Secondary"
+                        ]
                     },
                     "focus_term": {
                         "type": "array",
@@ -884,7 +935,10 @@
                 "type": "object",
                 "properties": {
                     "type_of_heading": {
-                        "enum": ["Faceted", "Basic"]
+                        "enum": [
+                            "Faceted",
+                            "Basic"
+                        ]
                     },
                     "thesaurus": {
                         "type": "string"

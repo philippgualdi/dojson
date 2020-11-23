@@ -2,6 +2,7 @@
 #
 # This file is part of DoJSON
 # Copyright (C) 2015 CERN.
+# Copyright (C) 2020 Graz University of Technology.
 #
 # DoJSON is free software; you can redistribute it and/or
 # modify it under the terms of the Revised BSD License; see LICENSE
@@ -11,14 +12,14 @@
 
 from dojson import Overdo, utils
 
-marc21 = Overdo(entry_point_group='dojson.contrib.marc21')
+marc21 = Overdo(entry_point_group="dojson.contrib.marc21")
 """MARC 21 Format for Bibliographic Data."""
 
-marc21_authority = Overdo(entry_point_group='dojson.contrib.marc21_authority')
+marc21_authority = Overdo(entry_point_group="dojson.contrib.marc21_authority")
 """MARC 21 Format for Authority Data."""
 
 
-@marc21.over('__order__', '__order__')
+@marc21.over("__order__", "__order__")
 def order(self, key, value):
     """Preserve order of datafields."""
     order = []
@@ -33,7 +34,7 @@ def order(self, key, value):
     return order
 
 
-@marc21_authority.over('__order__', '__order__')
+@marc21_authority.over("__order__", "__order__")
 def order_ad(self, key, value):
     """Preserve order of datafields."""
     order = []
@@ -47,5 +48,6 @@ def order_ad(self, key, value):
 
     return order
 
-marc21_holdings = Overdo(entry_point_group='dojson.contrib.marc21_holdings')
+
+marc21_holdings = Overdo(entry_point_group="dojson.contrib.marc21_holdings")
 """MARC 21 Format for Holdings Data."""
