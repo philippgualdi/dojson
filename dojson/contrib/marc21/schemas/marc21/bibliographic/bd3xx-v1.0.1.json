@@ -79,7 +79,10 @@
                 "type": "object",
                 "properties": {
                     "display_constant_controller": {
-                        "enum": ["Hours", "No display constant generated"]
+                        "enum": [
+                            "Hours",
+                            "No display constant generated"
+                        ]
                     },
                     "hours": {
                         "type": "string"
@@ -384,10 +387,23 @@
                 "type": "object",
                 "properties": {
                     "geospatial_reference_dimension": {
-                        "enum": ["Vertical coordinate system", "Horizontal coordinate system"]
+                        "enum": [
+                            "Vertical coordinate system",
+                            "Horizontal coordinate system"
+                        ]
                     },
                     "geospatial_reference_method": {
-                        "enum": ["Map projection", "Method specified in $2", "Altitude", "Depth", "Geodetic model", "Geographic", "Local", "Local planar", "Grid coordinate system"]
+                        "enum": [
+                            "Map projection",
+                            "Method specified in $2",
+                            "Altitude",
+                            "Depth",
+                            "Geodetic model",
+                            "Geographic",
+                            "Local",
+                            "Local planar",
+                            "Grid coordinate system"
+                        ]
                     },
                     "reference_method_used": {
                         "type": "string"
@@ -888,7 +904,15 @@
                 "type": "object",
                 "properties": {
                     "controlled_element": {
-                        "enum": ["Contents note", "Author", "Abstract", "Title", "Record", "Document", "None of the above"]
+                        "enum": [
+                            "Contents note",
+                            "Author",
+                            "Abstract",
+                            "Title",
+                            "Record",
+                            "Document",
+                            "None of the above"
+                        ]
                     },
                     "security_classification": {
                         "type": "string"
@@ -980,7 +1004,10 @@
                 "type": "object",
                 "properties": {
                     "format_of_date": {
-                        "enum": ["Unformatted note", "Formatted style"]
+                        "enum": [
+                            "Unformatted note",
+                            "Formatted style"
+                        ]
                     },
                     "dates_of_publication_and_or_sequential_designation": {
                         "type": "string"
@@ -1007,10 +1034,18 @@
                 "type": "object",
                 "properties": {
                     "start_end_designator": {
-                        "enum": ["Ending information", "Starting information", "No information provided"]
+                        "enum": [
+                            "Ending information",
+                            "Starting information",
+                            "No information provided"
+                        ]
                     },
                     "state_of_issuance": {
-                        "enum": ["Not specified", "Open", "Closed"]
+                        "enum": [
+                            "Not specified",
+                            "Open",
+                            "Closed"
+                        ]
                     },
                     "first_level_of_enumeration": {
                         "type": "string"
@@ -1370,10 +1405,18 @@
                 "type": "object",
                 "properties": {
                     "display_constant_controller": {
-                        "enum": ["No information provided", "Partial medium of performance", "Medium of performance"]
+                        "enum": [
+                            "No information provided",
+                            "Partial medium of performance",
+                            "Medium of performance"
+                        ]
                     },
                     "access_control": {
-                        "enum": ["No information provided", "Intended for access", "Not intended for access"]
+                        "enum": [
+                            "No information provided",
+                            "Intended for access",
+                            "Not intended for access"
+                        ]
                     },
                     "medium_of_performance": {
                         "type": "array",
@@ -1496,7 +1539,11 @@
             "description": "Key",
             "properties": {
                 "key_type": {
-                    "enum": ["Transposed key", "Original key", "Relationship to original unknown"]
+                    "enum": [
+                        "Transposed key",
+                        "Original key",
+                        "Relationship to original unknown"
+                    ]
                 },
                 "key": {
                     "type": "string"
@@ -1615,7 +1662,11 @@
                 "type": "object",
                 "properties": {
                     "type_of_time_period": {
-                        "enum": ["Creation of aggregate work", "No information provided", "Creation of work"]
+                        "enum": [
+                            "Creation of aggregate work",
+                            "No information provided",
+                            "Creation of work"
+                        ]
                     },
                     "time_period_of_creation_term": {
                         "type": "array",

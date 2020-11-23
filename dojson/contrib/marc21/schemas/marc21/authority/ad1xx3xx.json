@@ -5,7 +5,11 @@
             "description": "Heading-Personal Name",
             "properties": {
                 "type_of_personal_name_entry_element": {
-                    "enum": ["Family name", "Surname", "Forename"]
+                    "enum": [
+                        "Family name",
+                        "Surname",
+                        "Forename"
+                    ]
                 },
                 "linkage": {
                     "type": "string"
@@ -127,7 +131,11 @@
             "description": "Heading-Corporate Name",
             "properties": {
                 "type_of_corporate_name_entry_element": {
-                    "enum": ["Inverted name", "Jurisdiction name", "Name in direct order"]
+                    "enum": [
+                        "Inverted name",
+                        "Jurisdiction name",
+                        "Name in direct order"
+                    ]
                 },
                 "linkage": {
                     "type": "string"
@@ -246,7 +254,11 @@
             "description": "Heading-Meeting Name",
             "properties": {
                 "type_of_meeting_name_entry_element": {
-                    "enum": ["Inverted name", "Jurisdiction name", "Name in direct order"]
+                    "enum": [
+                        "Inverted name",
+                        "Jurisdiction name",
+                        "Name in direct order"
+                    ]
                 },
                 "meeting_name_or_jurisdiction_name_as_entry_element": {
                     "type": "string"
@@ -353,7 +365,18 @@
             "description": "Heading-Uniform Title",
             "properties": {
                 "nonfiling_characters": {
-                    "enum": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+                    "enum": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9"
+                    ]
                 },
                 "uniform_title": {
                     "type": "string"
@@ -1542,7 +1565,11 @@
                 "type": "object",
                 "properties": {
                     "display_constant_controller": {
-                        "enum": ["No information provided", "Partial medium of performance", "Medium of performance"]
+                        "enum": [
+                            "No information provided",
+                            "Partial medium of performance",
+                            "Medium of performance"
+                        ]
                     },
                     "medium_of_performance": {
                         "type": "array",
@@ -1775,7 +1802,11 @@
                 "type": "object",
                 "properties": {
                     "type_of_time_period": {
-                        "enum": ["Creation of aggregate work", "No information provided", "Creation of work"]
+                        "enum": [
+                            "Creation of aggregate work",
+                            "No information provided",
+                            "Creation of work"
+                        ]
                     },
                     "time_period_of_creation_term": {
                         "type": "array",

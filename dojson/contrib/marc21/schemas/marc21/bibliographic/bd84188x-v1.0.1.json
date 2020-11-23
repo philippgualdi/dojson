@@ -32,7 +32,12 @@
                         "type": "string"
                     },
                     "shelving_order": {
-                        "enum": ["No information provided", "Primary enumeration", "Not enumeration", "Alternative enumeration"]
+                        "enum": [
+                            "No information provided",
+                            "Primary enumeration",
+                            "Not enumeration",
+                            "Alternative enumeration"
+                        ]
                     },
                     "materials_specified": {
                         "type": "string"
@@ -161,7 +166,13 @@
                         "type": "string"
                     },
                     "relationship": {
-                        "enum": ["Version of resource", "Related resource", "Resource", "No information provided", "No display constant generated"]
+                        "enum": [
+                            "Version of resource",
+                            "Related resource",
+                            "Resource",
+                            "No information provided",
+                            "No display constant generated"
+                        ]
                     },
                     "materials_specified": {
                         "type": "string"
@@ -334,7 +345,11 @@
                 "type": "object",
                 "properties": {
                     "method_of_machine_assignment": {
-                        "enum": ["Fully machine-generated", "No information provided/not applicable", "Partially machine-generated"]
+                        "enum": [
+                            "Fully machine-generated",
+                            "No information provided/not applicable",
+                            "Partially machine-generated"
+                        ]
                     },
                     "generation_process": {
                         "type": "string"

@@ -8,7 +8,11 @@
                 "type": "object",
                 "properties": {
                     "type_of_personal_name_entry_element": {
-                        "enum": ["Family name", "Surname", "Forename"]
+                        "enum": [
+                            "Family name",
+                            "Surname",
+                            "Forename"
+                        ]
                     },
                     "thesaurus": {
                         "type": "string"
@@ -167,7 +171,11 @@
                 "type": "object",
                 "properties": {
                     "type_of_corporate_name_entry_element": {
-                        "enum": ["Inverted name", "Jurisdiction name", "Name in direct order"]
+                        "enum": [
+                            "Inverted name",
+                            "Jurisdiction name",
+                            "Name in direct order"
+                        ]
                     },
                     "thesaurus": {
                         "type": "string"
@@ -323,7 +331,11 @@
                 "type": "object",
                 "properties": {
                     "type_of_meeting_name_entry_element": {
-                        "enum": ["Inverted name", "Jurisdiction name", "Name in direct order"]
+                        "enum": [
+                            "Inverted name",
+                            "Jurisdiction name",
+                            "Name in direct order"
+                        ]
                     },
                     "thesaurus": {
                         "type": "string"

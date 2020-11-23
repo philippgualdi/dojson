@@ -8,10 +8,17 @@
                 "type": "object",
                 "properties": {
                     "type_of_personal_name_entry_element": {
-                        "enum": ["Family name", "Surname", "Forename"]
+                        "enum": [
+                            "Family name",
+                            "Surname",
+                            "Forename"
+                        ]
                     },
                     "type_of_added_entry": {
-                        "enum": ["No information provided", "Analytical entry"]
+                        "enum": [
+                            "No information provided",
+                            "Analytical entry"
+                        ]
                     },
                     "authority_record_control_number_or_standard_number": {
                         "type": "array",
@@ -143,10 +150,17 @@
                 "type": "object",
                 "properties": {
                     "type_of_corporate_name_entry_element": {
-                        "enum": ["Inverted name", "Jurisdiction name", "Name in direct order"]
+                        "enum": [
+                            "Inverted name",
+                            "Jurisdiction name",
+                            "Name in direct order"
+                        ]
                     },
                     "type_of_added_entry": {
-                        "enum": ["No information provided", "Analytical entry"]
+                        "enum": [
+                            "No information provided",
+                            "Analytical entry"
+                        ]
                     },
                     "authority_record_control_number_or_standard_number": {
                         "type": "array",
@@ -275,10 +289,17 @@
                 "type": "object",
                 "properties": {
                     "type_of_meeting_name_entry_element": {
-                        "enum": ["Inverted name", "Jurisdiction name", "Name in direct order"]
+                        "enum": [
+                            "Inverted name",
+                            "Jurisdiction name",
+                            "Name in direct order"
+                        ]
                     },
                     "type_of_added_entry": {
-                        "enum": ["No information provided", "Analytical entry"]
+                        "enum": [
+                            "No information provided",
+                            "Analytical entry"
+                        ]
                     },
                     "authority_record_control_number_or_standard_number": {
                         "type": "array",
@@ -395,7 +416,11 @@
                 "type": "object",
                 "properties": {
                     "type_of_name": {
-                        "enum": ["Personal", "Not specified", "Other"]
+                        "enum": [
+                            "Personal",
+                            "Not specified",
+                            "Other"
+                        ]
                     },
                     "name": {
                         "type": "string"
@@ -431,10 +456,24 @@
                 "type": "object",
                 "properties": {
                     "nonfiling_characters": {
-                        "enum": ["1", "0", "3", "2", "5", "4", "7", "6", "9", "8"]
+                        "enum": [
+                            "1",
+                            "0",
+                            "3",
+                            "2",
+                            "5",
+                            "4",
+                            "7",
+                            "6",
+                            "9",
+                            "8"
+                        ]
                     },
                     "type_of_added_entry": {
-                        "enum": ["No information provided", "Analytical entry"]
+                        "enum": [
+                            "No information provided",
+                            "Analytical entry"
+                        ]
                     },
                     "uniform_title": {
                         "type": "string"
@@ -536,10 +575,24 @@
                 "type": "object",
                 "properties": {
                     "nonfiling_characters": {
-                        "enum": ["1", "0", "3", "2", "5", "4", "7", "6", "9", "8"]
+                        "enum": [
+                            "1",
+                            "0",
+                            "3",
+                            "2",
+                            "5",
+                            "4",
+                            "7",
+                            "6",
+                            "9",
+                            "8"
+                        ]
                     },
                     "type_of_added_entry": {
-                        "enum": ["No information provided", "Analytical entry"]
+                        "enum": [
+                            "No information provided",
+                            "Analytical entry"
+                        ]
                     },
                     "uncontrolled_related_analytical_title": {
                         "type": "string"
