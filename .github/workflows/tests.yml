@@ -34,7 +34,7 @@ jobs:
 
       - name: Generate dependencies
         run: |
-          python -m pip install --upgrade pip setuptools py wheel requirements-builder
+          python -m pip install --upgrade pip setuptools py twine wheel coveralls requirements-builder
           requirements-builder -e all --level=${{ matrix.requirements-level }} setup.py > .${{ matrix.requirements-level }}-${{ matrix.python-version }}-requirements.txt
 
       - name: Install dependencies
