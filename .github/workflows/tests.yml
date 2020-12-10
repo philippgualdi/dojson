@@ -32,6 +32,10 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
+      - name: Prepare System
+        run: |
+          sudo apt-get install gcc
+          
       - name: Generate dependencies
         run: |
           python -m pip install --upgrade pip setuptools py twine wheel coveralls requirements-builder
