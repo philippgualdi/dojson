@@ -2,6 +2,7 @@
 #
 # This file is part of DoJSON
 # Copyright (C) 2016 CERN.
+# Copyright (C) 2020 Graz University of Technology.
 #
 # DoJSON is free software; you can redistribute it and/or
 # modify it under the terms of the Revised BSD License; see LICENSE
@@ -11,5 +12,5 @@
 
 from dojson.cli import cli
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     cli()

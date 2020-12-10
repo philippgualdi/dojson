@@ -2,6 +2,7 @@
 #
 # This file is part of DoJSON
 # Copyright (C) 2015, 2016, 2017 CERN.
+# Copyright (C) 2020 Graz University of Technology.
 #
 # DoJSON is free software; you can redistribute it and/or
 # modify it under the terms of the Revised BSD License; see LICENSE
@@ -34,21 +35,25 @@ def ignore_value(f):
 
     .. versionadded:: 0.2.0
     """
+
     @functools.wraps(f)
     def wrapper(self, key, value, **kwargs):
         result = f(self, key, value, **kwargs)
         if result is None:
             raise IgnoreKey(key)
         return result
+
     return wrapper
 
 
 def filter_values(f):
     """Remove None values from dictionary."""
+
     @functools.wraps(f)
     def wrapper(*args, **kwargs):
         out = f(*args, **kwargs)
         return dict((k, v) for k, v in iteritems(out) if v is not None)
+
     return wrapper
 
 
@@ -57,11 +62,11 @@ def flatten(f):
 
     .. versionadded:: 1.3.0
     """
+
     @functools.wraps(f)
     def wrapper(self, key, values, **kwargs):
-        return list(itertools.chain.from_iterable(
-            f(self, key, values, **kwargs)
-        ))
+        return list(itertools.chain.from_iterable(f(self, key, values, **kwargs)))
+
     return wrapper
 
 
@@ -69,7 +74,7 @@ def for_each_value(f):
     """Apply function to each item."""
     # Extends values under same name in output.  This should be possible
     # because we are alredy expecting list.
-    setattr(f, '__extend__', True)
+    setattr(f, "__extend__", True)
 
     @functools.wraps(f)
     def wrapper(self, key, values, **kwargs):
@@ -85,11 +90,13 @@ def for_each_value(f):
                 continue
 
         return parsed_values
+
     return wrapper
 
 
 def reverse_for_each_value(f):
     """Undo what `for_each_value` does."""
+
     @functools.wraps(f)
     def wrapper(self, key, values, **kwargs):
         if isinstance(values, (list, tuple, set)):
@@ -136,11 +143,11 @@ def dump(iterator):
 
 def deprecated(explanation):
     """Decorate as deprecated."""
+
     def decorator(f):
         @functools.wraps(f)
         def wrapper(self, key, values, **kwargs):
-            warnings.warn('{0}: {1}'.format(key, explanation),
-                          DeprecationWarning)
+            warnings.warn("{0}: {1}".format(key, explanation), DeprecationWarning)
             return f(self, key, values, **kwargs)
 
     return decorator
@@ -156,8 +163,8 @@ def map_order(field_map, value):
 
     .. versionadded:: 1.1.0
     """
-    if '__order__'in value:
-        order = value['__order__']
+    if "__order__" in value:
+        order = value["__order__"]
     else:
         order = value.keys()
 
@@ -173,8 +180,7 @@ class GroupableOrderedDict(OrderedDict):
         OrderedDict.__init__(new)
 
         if len(args) > 1:
-            raise TypeError('expected at most 1 arguments, got {}'
-                            .format(len(args)))
+            raise TypeError("expected at most 1 arguments, got {}".format(len(args)))
 
         ordering = []
         values = args[0]
@@ -183,8 +189,8 @@ class GroupableOrderedDict(OrderedDict):
             if isinstance(values, cls):
                 values = values.iteritems(with_order=False, repeated=True)
             elif isinstance(values, dict):
-                if '__order__' in values:
-                    order = values.pop('__order__')
+                if "__order__" in values:
+                    order = values.pop("__order__")
 
                     tmp = []
                     c = Counter()
@@ -194,9 +200,10 @@ class GroupableOrderedDict(OrderedDict):
                             if c[key] == 0:
                                 tmp.append((key, v))
                             else:
-                                raise Exception("Order and values don't match "
-                                                "on key {0} at position {1}"
-                                                .format(key, c[key]))
+                                raise Exception(
+                                    "Order and values don't match "
+                                    "on key {0} at position {1}".format(key, c[key])
+                                )
                         else:
                             tmp.append((key, v[c[key]]))
                         c[key] += 1
@@ -213,7 +220,7 @@ class GroupableOrderedDict(OrderedDict):
                         v.append(item)
                         ordering.append(key)
                 elif isinstance(value, dict):
-                    if '__order__' in value:
+                    if "__order__" in value:
                         value = cls(value)
                     v.append(value)
                     ordering.append(key)
@@ -227,15 +234,17 @@ class GroupableOrderedDict(OrderedDict):
         for key, value in dict.items(new):
             OrderedDict.__setitem__(new, key, tuple(value))
 
-        OrderedDict.__setitem__(new, '__order__', tuple(ordering))
+        OrderedDict.__setitem__(new, "__order__", tuple(ordering))
         return new
 
     def __repr__(self):
         """Output the representation of the GroupableOrderedDict."""
-        out = ("({!r}, {!r})".format(k, v)
-               for k, v in self.iteritems(repeated=True)
-               if k != '__order__')
-        return 'GroupableOrderedDict(({out}))'.format(out=', '.join(out))
+        out = (
+            "({!r}, {!r})".format(k, v)
+            for k, v in self.iteritems(repeated=True)
+            if k != "__order__"
+        )
+        return "GroupableOrderedDict(({out}))".format(out=", ".join(out))
 
     __str__ = __repr__
 
@@ -255,7 +264,7 @@ class GroupableOrderedDict(OrderedDict):
 
     def __reduce__(self):
         """Pickle helper."""
-        return self.__class__, (dict(self.items()), )
+        return self.__class__, (dict(self.items()),)
 
     def __eq__(self, other):
         """Comparison help."""
@@ -264,14 +273,16 @@ class GroupableOrderedDict(OrderedDict):
         if isinstance(other, tuple):
             return False
 
-        if (len(self.keys()) != len(other.keys()) and
-                '__order__' not in other and
-                len(self.keys()) - 1 == len(other.keys())):
+        if (
+            len(self.keys()) != len(other.keys())
+            and "__order__" not in other
+            and len(self.keys()) - 1 == len(other.keys())
+        ):
 
             return False
 
         for k, vs in self.iteritems():
-            if k == '__order__':
+            if k == "__order__":
                 if k in other and vs != other[k]:
                     return False
                 else:
@@ -322,25 +333,27 @@ class GroupableOrderedDict(OrderedDict):
         It will return a list or an element depending on the quantity present.
         """
         item = OrderedDict.__getitem__(self, key)
-        if len(item) == 1 and key != '__order__':
+        if len(item) == 1 and key != "__order__":
             return item[0]
         return item
 
     def __setitem__(self, *args, **kwargs):
         """Item assigment is not supported."""
-        raise TypeError('{} object does not support item assignment'
-                        .format(self.__class__.__name__))
+        raise TypeError(
+            "{} object does not support item assignment".format(self.__class__.__name__)
+        )
 
     def __delitem__(self, *args, **kwargs):
         """Item deletion is not supported."""
-        raise TypeError('{} object does not support item deletion'
-                        .format(self.__class__.__name__))
+        raise TypeError(
+            "{} object does not support item deletion".format(self.__class__.__name__)
+        )
 
     def __iter__(self):
         """Iterate."""
         occurences = Counter()
-        order = self['__order__']
-        yield '__order__'
+        order = self["__order__"]
+        yield "__order__"
         for o in order:
             if occurences[o] == 0:
                 yield o
@@ -355,13 +368,13 @@ class GroupableOrderedDict(OrderedDict):
         values = []
         if expand:
             occurences = Counter()
-            order = self['__order__']
+            order = self["__order__"]
             for key in order:
                 values.append(dict.__getitem__(self, key)[occurences[key]])
                 occurences[key] += 1
         else:
             for key, value in OrderedDict.items(self):
-                if key == '__order__':
+                if key == "__order__":
                     continue
                 if len(value) == 1:
                     values.append(value[0])
@@ -378,10 +391,10 @@ class GroupableOrderedDict(OrderedDict):
         """
         if not repeated:
             keys = list(OrderedDict.keys(self))
-            keys.remove('__order__')
+            keys.remove("__order__")
             return keys
         else:
-            return list(self['__order__'])
+            return list(self["__order__"])
 
     def items(self, with_order=True, repeated=False):
         """List of D's (key, value) pairs, as 2-tuples.
@@ -399,25 +412,26 @@ class GroupableOrderedDict(OrderedDict):
         """Just like D.items() but as an iterator."""
         if not repeated:
             if with_order:
-                yield '__order__', dict.__getitem__(self, '__order__')
+                yield "__order__", dict.__getitem__(self, "__order__")
             occurences = {
-                k: len(list(v))
-                for k, v in itertools.groupby(sorted(self.keys()))
+                k: len(list(v)) for k, v in itertools.groupby(sorted(self.keys()))
             }
             for key, value in OrderedDict.items(self):
-                if key == '__order__':
+                if key == "__order__":
                     continue
-                if isinstance(value, (list, tuple)) and \
-                        len(value) == 1 and \
-                        occurences[key] == 1:
+                if (
+                    isinstance(value, (list, tuple))
+                    and len(value) == 1
+                    and occurences[key] == 1
+                ):
                     yield key, value[0]
                 else:
                     yield key, value
         else:
             occurences = Counter()
-            order = self['__order__']
+            order = self["__order__"]
             if with_order:
-                yield '__order__', order
+                yield "__order__", order
             for key in order:
                 yield key, OrderedDict.__getitem__(self, key)[occurences[key]]
                 occurences[key] += 1

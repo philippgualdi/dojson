@@ -8,7 +8,11 @@
                 "type": "object",
                 "properties": {
                     "type_of_personal_name_element": {
-                        "enum": ["Family name", "Surname", "Forename"]
+                        "enum": [
+                            "Family name",
+                            "Surname",
+                            "Forename"
+                        ]
                     },
                     "institution_to_which_field_applies": {
                         "type": "array",
@@ -155,7 +159,11 @@
                 "type": "object",
                 "properties": {
                     "type_of_corporate_name_entry_element": {
-                        "enum": ["Inverted name", "Jurisdiction name", "Name in direct order"]
+                        "enum": [
+                            "Inverted name",
+                            "Jurisdiction name",
+                            "Name in direct order"
+                        ]
                     },
                     "institution_to_which_field_applies": {
                         "type": "array",
@@ -299,7 +307,11 @@
                 "type": "object",
                 "properties": {
                     "type_of_meeting_name_entry_element": {
-                        "enum": ["Inverted name", "Jurisdiction name", "Name in direct order"]
+                        "enum": [
+                            "Inverted name",
+                            "Jurisdiction name",
+                            "Name in direct order"
+                        ]
                     },
                     "institution_to_which_field_applies": {
                         "type": "array",
@@ -431,7 +443,18 @@
                 "type": "object",
                 "properties": {
                     "nonfiling_characters": {
-                        "enum": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+                        "enum": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            8,
+                            9
+                        ]
                     },
                     "institution_to_which_field_applies": {
                         "type": "array",

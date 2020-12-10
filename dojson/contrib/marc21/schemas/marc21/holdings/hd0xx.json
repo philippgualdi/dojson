@@ -208,7 +208,11 @@
                         "type": "string"
                     },
                     "difference_indicator": {
-                        "enum": ["No difference", "Difference", "No information provided"]
+                        "enum": [
+                            "No difference",
+                            "Difference",
+                            "No information provided"
+                        ]
                     },
                     "standard_number_or_code": {
                         "type": "string"

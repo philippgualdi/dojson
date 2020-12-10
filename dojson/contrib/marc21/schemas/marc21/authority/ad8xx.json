@@ -371,7 +371,11 @@
                 "type": "object",
                 "properties": {
                     "method_of_machine_assignment": {
-                        "enum": ["Fully machine-generated", "No information provided/not applicable", "Partially machine-generated"]
+                        "enum": [
+                            "Fully machine-generated",
+                            "No information provided/not applicable",
+                            "Partially machine-generated"
+                        ]
                     },
                     "generation_process": {
                         "type": "string"

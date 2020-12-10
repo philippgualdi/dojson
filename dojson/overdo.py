@@ -2,6 +2,7 @@
 #
 # This file is part of DoJSON
 # Copyright (C) 2015, 2016 CERN.
+# Copyright (C) 2020 Graz University of Technology.
 #
 # DoJSON is free software; you can redistribute it and/or
 # modify it under the terms of the Revised BSD License; see LICENSE
@@ -40,23 +41,27 @@ class Index(object):
 
         def make_pattern(rules, flags=0):
             """Compile a rules to single branch with groups."""
-            return re.compile('|'.join('(?P<I{name}>{regex})'.format(
-                name=name, regex=regex
-            ) for name, (regex, _) in enumerate(rules)), flags=flags)
+            return re.compile(
+                "|".join(
+                    "(?P<I{name}>{regex})".format(name=name, regex=regex)
+                    for name, (regex, _) in enumerate(rules)
+                ),
+                flags=flags,
+            )
 
         for rules in zip_longest(*[iter(self.rules)] * self.branch_size):
-            self._patterns.append(make_pattern([
-                rule for rule in rules if rule is not None
-            ]))
+            self._patterns.append(
+                make_pattern([rule for rule in rules if rule is not None])
+            )
 
     def query(self, key):
         """Return data matching the key."""
         for section, pattern in enumerate(self._patterns):
             match = pattern.match(key)
             if match:
-                return self.rules[section * self.branch_size + int(
-                    match.lastgroup[1:]
-                )][1]
+                return self.rules[
+                    section * self.branch_size + int(match.lastgroup[1:])
+                ][1]
 
 
 class Overdo(object):
@@ -76,7 +81,8 @@ class Overdo(object):
         """Collect entry points."""
         if self.entry_point_group is not None:
             for entry_point in iter_entry_points(
-                    group=self.entry_point_group, name=None):
+                group=self.entry_point_group, name=None
+            ):
                 entry_point.load()
 
     def build(self):
@@ -86,11 +92,13 @@ class Overdo(object):
 
     def over(self, name, *source_tags):
         """Register creator rule."""
+
         def decorator(creator):
             self.index = None
             for field in source_tags:
                 self.rules.append((field, (name, creator)))
             return creator
+
         return decorator
 
     def do(self, blob, ignore_missing=True, exception_handlers=None):
@@ -122,7 +130,7 @@ class Overdo(object):
         handlers.update(exception_handlers or {})
 
         def clean_missing(exc, output, key, value):
-            order = output.get('__order__')
+            order = output.get("__order__")
             if order:
                 order.remove(key)
 
@@ -147,7 +155,7 @@ class Overdo(object):
 
                 name, creator = result
                 data = creator(output, key, value)
-                if getattr(creator, '__extend__', False):
+                if getattr(creator, "__extend__", False):
                     existing = output.get(name, [])
                     existing.extend(data)
                     output[name] = existing

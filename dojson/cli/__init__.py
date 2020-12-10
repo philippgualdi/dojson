@@ -109,14 +109,15 @@ from .._compat import stdin
 from .utils import open_entry_point, with_plugins
 
 
-@with_plugins('dojson.cli')
+@with_plugins("dojson.cli")
 @click.group(chain=True, invoke_without_command=True)
-@click.option('-i', '--input', 'source', type=click.File('rb'),
-              default=stdin)
-@click.option('-l', '--load', callback=open_entry_point('dojson.cli.load'),
-              default='json')
-@click.option('-d', '--dump', callback=open_entry_point('dojson.cli.dump'),
-              default='json')
+@click.option("-i", "--input", "source", type=click.File("rb"), default=stdin)
+@click.option(
+    "-l", "--load", callback=open_entry_point("dojson.cli.load"), default="json"
+)
+@click.option(
+    "-d", "--dump", callback=open_entry_point("dojson.cli.dump"), default="json"
+)
 def cli(**kwargs):
     """Command line interface."""
 
@@ -124,6 +125,7 @@ def cli(**kwargs):
 @cli.resultcallback()
 def process_pipeline(processors, source, load, dump):
     """Call data processors."""
+
     def loader(iterator):
         data = load(iterator)
         if isinstance(data, dict):
