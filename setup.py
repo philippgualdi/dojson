@@ -40,7 +40,7 @@ for name, reqs in extras_require.items():
     extras_require["all"].extend(reqs)
 
 install_requires = [
-    "click>=6.1.0",
+    "click>=7.1.2",
     "lxml>=4.1.1",
     "simplejson>=3.8.1",
 ]
