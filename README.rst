@@ -10,8 +10,8 @@
 .. image:: https://img.shields.io/coveralls/tu-graz-library/dojson.svg
         :target: https://coveralls.io/r/tu-graz-library/dojson
 
-.. image:: https://img.shields.io/github/tag/tu-graz-library/dojson.svg
-        :target: https://github.com/tu-graz-library/dojson/releases
+.. image:: https://github.com/tu-graz-library/dojson/workflows/CI/badge.svg
+        :target: https://github.com/tu-graz-library/dojson/actions
 
 .. image:: https://img.shields.io/pypi/dm/dojson.svg
         :target: https://pypi.python.org/pypi/dojson
